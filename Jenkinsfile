@@ -11,6 +11,7 @@ node {
 
 stage 'Run Docker'
 node{
+	git url: 'git@github.com:mandavav/ManojTest.git'
 	sh 'pwd'
 	sh 'ls'
 	sh 'bash runDockerContainer.sh'
