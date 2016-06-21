@@ -11,5 +11,7 @@ node {
 
 stage 'Run Docker'
 node{
+	sh 'pwd'
+	sh 'ls'
 	sh 'bash runDockerContainer.sh'
 }
