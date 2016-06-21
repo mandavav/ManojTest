@@ -8,3 +8,8 @@ stage 'Deploy Dev'
 node {
 	sh 'echo bye'
 }
+
+stage 'Run Docker'
+node{
+	sh 'bash runDockerContainer.sh'
+}
