@@ -16,3 +16,4 @@ node{
 	sh 'ls'
 	sh 'bash runDockerContainer.sh'
 }
+
