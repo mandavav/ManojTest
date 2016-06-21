@@ -1,7 +1,7 @@
 stage 'Build Image'
 
 node {
-	sh 'echo hello'
+	sh 'bash test.sh'
 }
 
 stage 'Deploy Dev'
