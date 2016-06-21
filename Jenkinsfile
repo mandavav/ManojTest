@@ -1,6 +1,7 @@
 stage 'Build Image'
 
 node {
+	git url: 'https://github.com/mandavav/ManojTest.git'
 	sh 'bash test.sh'
 }
 
