@@ -21,7 +21,3 @@ stage 'Stop Docker'
 node{
 	sh 'bash stopContainer.sh'
 }
-
-
-
-
