@@ -18,5 +18,17 @@ node{
 	sh 'bash runDockerContainer.sh'
 }
 
+stage 'Test'
+node{
+	sh 'curl localhost:8080'
+}
+
+stage 'Stop Docker'
+node{
+	git url: 'https://github.com/mandavav/ManojTest.git'
+	sh 'bash stopContainer.sh'
+}
+
+
 
 
