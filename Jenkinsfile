@@ -9,6 +9,7 @@ node{
 stage 'Test'
 node{
 	sh 'curl localhost:8080'
+	sh 'bash test.sh'
 }
 
 stage 'Push Image'
