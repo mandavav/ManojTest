@@ -23,6 +23,11 @@ node{
 	sh 'curl localhost:8080'
 }
 
+stage 'Push Image'
+node{
+	sh 'bash storeImage.sh'
+}
+
 stage 'Stop Docker'
 node{
 	git url: 'https://github.com/mandavav/ManojTest.git'
