@@ -1,22 +1,16 @@
 stage 'Run Docker'
 node{
-	git url: 'https://github.com/mandavav/ManojTest.git'
-	sh 'pwd'
-	sh 'ls'
-	sh 'bash runDockerContainer.sh'
+	sh 'echo Running Docker'
 }
 
 stage 'Test'
 node{
-	sh 'curl localhost:8080'
+	sh 'curl localhost'
 }
 
 stage 'Push Image'
 node{
-	sh 'bash storeImage.sh'
+	sh 'echo Pushing Image'
 }
 
-stage 'Stop Docker'
-node{
-	sh 'bash stopContainer.sh'
-}
+
