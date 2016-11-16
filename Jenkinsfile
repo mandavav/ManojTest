@@ -13,7 +13,7 @@ node{
 		echo '2222222222222222222222222'
  +		sh ('cd /var/lib/jenkins/workspace/BuildAndDeploy/ecm_receiveFromFolder && ls')
   		echo '33333333333333333333333333333'
-		sh "${mvnHome}/bin/mvn clean"
+		sh "${mvnHome}/bin/mvn -B verify"
   		
        		sh ('cd ecm_receiveFromFolder && ls')
 	
