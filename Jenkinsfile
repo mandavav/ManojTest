@@ -1,6 +1,7 @@
 node{
 	stage 'Checkout'
 		echo 'Cloning Repo!'
+		checkout scm
 	
 	stage 'Test'
 		echo 'Testing'
