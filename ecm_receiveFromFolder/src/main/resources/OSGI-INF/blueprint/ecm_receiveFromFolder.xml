@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<!--
+Author: William Sanchez
+Project: ECM POC
+Company: BAH
+Customer: IRS
+Date: Nov 2015
+-->
+
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+             http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+             http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+
+    <bean id="activemq" class="org.apache.activemq.camel.component.ActiveMQComponent" >
+		<property name="connectionFactory">
+			<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL" value="vm://localhost?create=false&amp;waitForStart=10000" />
+				<property name="userName" value="admin"/>
+				<property name="password" value="admin"/>
+			</bean>
+		</property>
+    </bean>
+  
+    <camelContext id="ecm_receiveFromFolder" xmlns="http://camel.apache.org/schema/blueprint" >
+        <route id="process send case">
+		<from uri="file:/data/dev/ecm/casesTosend" id="storeFile"/>
+		<log message="ecm_receiveFromFolder ${body}"/>
+		<setBody>
+            <simple>${body}</simple>
+        </setBody>
+		<to uri="activemq:topic:ecm.caseReceived" id="Received Event"/>
+        </route>
+    </camelContext>
+
+</blueprint>
