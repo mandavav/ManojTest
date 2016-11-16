@@ -9,6 +9,7 @@ node{
 		sh 'pwd'
 		sh 'ls'
 		sh 'whoami'
+		echo $PATH
 		sh 'mvn'
 	
 }
