@@ -4,6 +4,7 @@ node{
 	
 	stage 'Test'
 		echo 'Testing'
+		sh 'pwd'
 		sh 'ls'
 	
 }
