@@ -9,8 +9,8 @@ node{
 		sh 'pwd'
 		sh 'ls'
 		sh 'whoami'
-		echo $PATH
-		sh 'mvn'
+		def mvnHome = tool 'M3'
+     		sh "${mvnHome}/bin/mvn"
 	
 }
 
