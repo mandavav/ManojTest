@@ -1,9 +1,9 @@
 node{
 	stage 'Checkout'
-		print 'Cloning Repo!'
+		echo 'Cloning Repo!'
 	
 	stage 'Test'
-		print 'Testing'
+		echo 'Testing'
 		sh 'ls'
 	
 }
