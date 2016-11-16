@@ -6,11 +6,12 @@ node{
 	
 	stage 'Test'
 		echo 'Testing'
-		sh 'pwd'
-		sh 'ls'
-		sh 'whoami'
+		
 		def mvnHome = tool 'M3'
-     		sh "${mvnHome}/bin/mvn"
+		sh 'cd ecm_receiveFromFolder'
+		sh 'ls'
+     		sh "${mvnHome}/bin/mvn clean"
+		sh 'ls'
 	
 	
 }
