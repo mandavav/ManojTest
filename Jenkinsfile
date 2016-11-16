@@ -9,10 +9,10 @@ node{
 		
 		def mvnHome = tool 'M3'
 		echo '111111111111111111111'
-		sh 'ls'
+		sh 'pwd'
 		sh 'cd ecm_receiveFromFolder'
 		echo '2222222222222222222222222'
-		sh 'ls'
+		sh 'pwd'
      		sh "${mvnHome}/bin/mvn clean"
 		echo '33333333333333333333333'
 		sh 'ls'
