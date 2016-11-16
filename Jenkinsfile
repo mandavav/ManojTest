@@ -7,6 +7,7 @@ node{
 		echo 'Testing'
 		sh 'pwd'
 		sh 'ls'
+		sh 'mvn'
 	
 }
 
