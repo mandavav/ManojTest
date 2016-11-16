@@ -11,8 +11,9 @@ node{
 		echo '111111111111111111111'
 		sh ('cd ecm_receiveFromFolder && ls')
 		echo '2222222222222222222222222'
- +		sh ('cd /var/lib/jenkins/workspace/BuildAndDeploy/ecm_receiveFromFolder && ${mvnHome}/bin/mvn clean')
+ +		sh ('cd /var/lib/jenkins/workspace/BuildAndDeploy/ecm_receiveFromFolder && ls')
   		echo '33333333333333333333333333333'
+		sh '${mvnHome}/bin/mvn clean'
   		
        		sh ('cd ecm_receiveFromFolder && ls')
 	
