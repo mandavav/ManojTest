@@ -1,6 +1,11 @@
-stage 'Run Docker'
 node{
-	sh 'echo Running Dockers'
+	stage 'Checkout'
+		print 'Cloning Repo!'
+	
+	stage 'Test'
+		print 'Testing'
+		sh 'ls'
+	
 }
 
 
