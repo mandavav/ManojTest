@@ -15,8 +15,7 @@ node{
   		echo '33333333333333333333333333333'
 		sh "${mvnHome}/bin/mvn -B verify"
   		
-       		sh ('cd ecm_receiveFromFolder && ls')
-	
+       		sh ('cd ecm_receiveFromFolder && ls')	
 }
 
 
