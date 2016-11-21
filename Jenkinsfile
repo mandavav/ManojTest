@@ -6,11 +6,11 @@ node{
 	
 	stage 'Test'
 		echo 'Testing'
-		
-		def mvnHome = tool 'M3'
+		env.PATH = "${tool 'M3'}/bin:${env.PATH}"
 		echo '111111111111111111111'
 		sh 'pwd'
 		sh 'ls'
+		sh 'mvn clean'
 		
 
 }
