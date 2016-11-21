@@ -1,2 +1,1 @@
 cd ecm_receiveFromFolder
-
