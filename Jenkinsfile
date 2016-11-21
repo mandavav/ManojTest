@@ -4,7 +4,7 @@ node{
 		echo 'Cloning Repo!'
 		checkout scm
 	
-	stage 'Test'
+	stage 'Build'
 		echo 'Testing'
 		env.PATH = "${tool 'M3'}/bin:${env.PATH}"
 		echo '111111111111111111111'
@@ -17,6 +17,9 @@ node{
 		echo '--------------------Yes TARGET -----------------------------------'
 		sh 'ls'
 		sh ('cd target && ls')
+	
+	stage 'Deploy'
+		build job: 'Deploy'
 		
 
 }
