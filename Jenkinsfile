@@ -16,8 +16,7 @@ node{
 		sh "${mvnHome}/bin/mvn -B verify"
   		
        		sh ('cd ecm_receiveFromFolder && ls')
-	
-	
+
 }
 
 
