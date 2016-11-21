@@ -11,6 +11,11 @@ node{
 		sh 'pwd'
 		sh 'ls'
 		sh 'mvn clean'
+		echo '--------------------No TARGET -----------------------------------'
+		sh 'ls'
+		sh 'mvn clean install'
+		echo '--------------------Yes TARGET -----------------------------------'
+		sh 'ls'
 		
 
 }
