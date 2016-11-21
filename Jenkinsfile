@@ -20,7 +20,6 @@ node{
 	
 	stage 'Deploy'
 		build job: 'Deploy'
-		
 
 }
 
