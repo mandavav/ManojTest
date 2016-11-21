@@ -16,6 +16,7 @@ node{
 		sh 'mvn clean install'
 		echo '--------------------Yes TARGET -----------------------------------'
 		sh 'ls'
+		sh ('cd target && ls')
 		
 
 }
