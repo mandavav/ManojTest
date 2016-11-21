@@ -19,6 +19,7 @@ node{
 		sh ('cd target && ls')
 	
 	stage 'Deploy'
+		sh 'cp target/*.jar /var/lib/jenkins/workspace/Deploy/'
 		build job: 'Deploy'
 
 }
