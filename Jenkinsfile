@@ -16,6 +16,5 @@ node{
 		echo '------------------------- Copying jar file to Deploy Workspace -------------------------'
 		sh 'cp target/*.jar /var/lib/jenkins/workspace/Deploy/'
 		echo '------------------------- Calling the Deploy Jenkins Job -------------------------'
-		build job: 'Deploy'
-	
+		build job: 'Deploy'	
 }
