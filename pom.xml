@@ -107,7 +107,7 @@
   </dependencies>
 
     <build>
-    <finalName>shared</finalName>
+    <finalName>folder</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.felix</groupId>
